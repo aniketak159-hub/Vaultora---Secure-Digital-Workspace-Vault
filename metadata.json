@@ -1,0 +1,8 @@
+{
+  "name": "Vaultora - Secure Digital Workspace & Vault",
+  "description": "Your entire digital life. One secure zero-knowledge vault for logins, client workspaces, sensitive records, and team credential sharing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
