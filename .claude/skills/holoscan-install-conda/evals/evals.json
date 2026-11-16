@@ -1,0 +1,77 @@
+[
+  {
+    "id": "holoscan-install-conda-5x-001",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: Install Holoscan SDK 5.0 in Conda for Python development.",
+    "expected_skill": "holoscan-install-conda",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Explain that no 5.0 Conda package is available and offer supported alternatives.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "State that 5.0 has no Conda package.",
+      "Do not install Miniforge or run a conda solve.",
+      "Offer wheels, container, or source while preserving the 5.0 target."
+    ]
+  },
+  {
+    "id": "holoscan-install-conda-5x-002",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: My Conda environment already has Holoscan 4.6. Can you upgrade it to 5.0 with conda-forge?",
+    "expected_skill": "holoscan-install-conda",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. An existing 4.x environment does not make 5.0 Conda packages available.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Keep the existing environment intact.",
+      "Do not claim 4.x satisfies 5.0 or install a lower release silently.",
+      "Offer an isolated supported 5.0 path."
+    ]
+  },
+  {
+    "id": "holoscan-install-conda-5x-003",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: We need Holoscan 5.0 C++ headers but require Conda. What can we use?",
+    "expected_skill": "holoscan-install-conda",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Explain Conda unavailability and the C++ alternatives.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Explain the absence of 5.0 Conda packages.",
+      "Suggest Debian, container, or source for C++ headers.",
+      "Do not present a Python wheel as providing C++ development files."
+    ]
+  },
+  {
+    "id": "holoscan-install-conda-5x-004",
+    "question": "Explain the scheduler API of my already-installed SDK.",
+    "expected_skill": null,
+    "expected_script": null,
+    "ground_truth": "This request concerns API usage rather than Conda installation.",
+    "expected_behavior": [
+      "Do not invoke Conda installation or inspect Conda environments."
+    ]
+  },
+  {
+    "id": "holoscan-install-conda-5x-005",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: For this fictional future-release fixture, Holoscan SDK 5.1 release notes explicitly support Conda, matching packages are published, and the selected installation guide provides the method. Can we use Conda for that release?",
+    "expected_skill": "holoscan-install-conda",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Treat the supplied future-release support as a fixture and follow the selected release guide instead of applying the 5.0 limitation to all 5.x releases.",
+    "expected_behavior": [
+      "Use only the supplied release facts and local skill guidance; do not contact services or execute installation.",
+      "Recognize that the no-Conda statement applies to 5.0.",
+      "Plan to follow the fixture release guide for its supported Conda method; do not invent package names or commands absent from the fixture.",
+      "Preserve the requested 5.1 version rather than redirecting to 4.x or unnecessarily forcing another method."
+    ]
+  },
+  {
+    "id": "holoscan-install-conda-5x-006",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: Can I install a later Holoscan 5.x release with Conda? No release notes or package-publication evidence are available in this fixture.",
+    "expected_skill": "holoscan-install-conda",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Ask which exact release is intended and require matching support and publication evidence. Do not extrapolate 5.0 unavailability to every future release.",
+    "expected_behavior": [
+      "Use only the supplied fixture and local skill guidance; do not contact services or execute installation.",
+      "Establish the requested release and report that later-release Conda availability is unverified.",
+      "Do not assert either support or permanent absence across 5.x.",
+      "Offer verified alternatives without running a Conda solve or silently changing SDK version."
+    ]
+  }
+]

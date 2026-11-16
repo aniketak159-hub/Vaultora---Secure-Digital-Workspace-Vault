@@ -1,0 +1,4 @@
+interface:
+  display_name: "USD Performance Tuning"
+  short_description: "Diagnose and optimize OpenUSD scene performance"
+  default_prompt: "Use $omniverse-usd-performance-tuning to inspect a USD stage, preserve component and subcomponent boundaries, share reusable definitions, optimize eligible interior geometry, and verify the written assembly with a generated report."

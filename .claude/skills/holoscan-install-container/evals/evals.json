@@ -1,0 +1,54 @@
+[
+  {
+    "id": "holoscan-install-container-5x-001",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: Install the confirmed published 5.x CUDA 13 development image on my compatible Ubuntu 24.04 x86_64 dGPU host.",
+    "expected_skill": "holoscan-install-container",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Select the exact published tag and verify the installed 5.x SDK.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Use the full v5.x-cuda13 tag, not a 4.x tag.",
+      "Verify driver and Container Toolkit compatibility.",
+      "Plan an image-inspection command after pulling to record the actual image ID and repository digests; do not invent a digest or claim a plan-only check ran.",
+      "Locate examples under /usr and check Hello Holoscan! and the Python 5.x API.",
+      "Distinguish Core smoke coverage from optional module qualification."
+    ]
+  },
+  {
+    "id": "holoscan-install-container-5x-002",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: My driver supports only CUDA 12. Can I use a Holoscan 5.x cuda12-dgpu image?",
+    "expected_skill": "holoscan-install-container",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. There is no 5.x CUDA 12 image in this artifact set.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Do not invent cuda12-dgpu or cuda12-igpu tags.",
+      "Explain CUDA 13 prerequisites and assess compatibility before execution.",
+      "Preserve the 5.x target."
+    ]
+  },
+  {
+    "id": "holoscan-install-container-5x-003",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: The 5.x EA release notes say the container is not published. Please help me get started.",
+    "expected_skill": "holoscan-install-container",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Report unavailable binaries and offer a source build.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Check release-specific availability.",
+      "Do not substitute a 4.x image or claim a planned image is published.",
+      "Offer the source workflow."
+    ]
+  },
+  {
+    "id": "holoscan-install-container-5x-004",
+    "question": "Install native Holoscan C++ headers with apt; I do not want Docker.",
+    "expected_skill": null,
+    "expected_script": null,
+    "ground_truth": "Use the Debian workflow for this native C++ request.",
+    "expected_behavior": [
+      "Do not invoke the container install skill.",
+      "Honor the native C++ method choice."
+    ]
+  }
+]

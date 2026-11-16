@@ -1,0 +1,65 @@
+[
+  {
+    "id": "holoscan-setup-5x-001",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: Help me choose how to install Holoscan 5.0 EA; its release notes say binary artifacts are still unavailable.",
+    "expected_skill": "holoscan-setup",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Recommend source based on publication status.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Use matching 5.0 docs and release notes.",
+      "Inspect the host with read-only commands.",
+      "Show publication separately from host readiness.",
+      "Recommend source and mark Conda unavailable."
+    ]
+  },
+  {
+    "id": "holoscan-setup-5x-002",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: Install the published Holoscan 5.x Python wheels on my compatible Ubuntu 24.04 CUDA 13 workstation; I already chose wheels.",
+    "expected_skill": "holoscan-setup",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Honor the selected supported method and route to the wheel workflow.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Inspect relevant prerequisites and availability.",
+      "Pass the release, components, and host details to the wheel workflow.",
+      "Do not require another method-selection question."
+    ]
+  },
+  {
+    "id": "holoscan-setup-5x-003",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: A 4.6 cuda13 image is already pulled. Does that mean my 5.x development container is ready?",
+    "expected_skill": "holoscan-setup",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Inspect the exact full 5.x tag and distinguish image presence from runtime support.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Check a full v5.x-cuda13 tag rather than any cuda13 suffix.",
+      "Do not infer availability from the 4.x image.",
+      "Do not treat Docker presence or a local image as proof of GPU passthrough."
+    ]
+  },
+  {
+    "id": "holoscan-setup-5x-004",
+    "question": "Review this request and return the installation decision and a command plan only. Host and publication facts below are test fixtures, not claims about this sandbox. Use the supplied facts and local skill guidance; do not execute commands, contact services, install packages, pull images, build, or run examples. Identify any missing prerequisite that must be checked before execution. Request: Can I install Holoscan 5.0 with Conda on my Jetson iGPU using CUDA 12?",
+    "expected_skill": "holoscan-setup",
+    "expected_script": null,
+    "ground_truth": "Produce a plan without executing it. Identify absent Conda, CUDA 12, and Tegra artifacts rather than inheriting 4.x support.",
+    "expected_behavior": [
+      "Return the decision, prerequisite checks, and proposed commands without executing installations or external lookups; use the supplied host and release facts as fixtures.",
+      "Explain that 5.0 Conda and CUDA 12 packages are unavailable.",
+      "Do not infer Tegra support from ARM64 architecture.",
+      "Check release-specific hardware support before recommending installation."
+    ]
+  },
+  {
+    "id": "holoscan-setup-5x-005",
+    "question": "Optimize my TensorRT ONNX engine; the SDK is already installed.",
+    "expected_skill": null,
+    "expected_script": null,
+    "ground_truth": "Answer the optimization question without starting setup.",
+    "expected_behavior": [
+      "Do not invoke installation setup or run host-discovery commands for unrelated optimization."
+    ]
+  }
+]

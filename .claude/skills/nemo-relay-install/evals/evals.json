@@ -1,0 +1,212 @@
+[
+  {
+    "id": "nemo-relay-install-001",
+    "question": "I want to install the NeMo Relay CLI on macOS so I can get the nemo-relay command. I do not need app instrumentation yet.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Resolve the latest published stable CLI and its actual platform requirements from current official sources; install and verify only the executable.",
+    "expected_behavior": [
+      "Read the installation skill and CLI reference",
+      "Check current release metadata, the selected asset, and the release's prerequisites",
+      "Derive the install command from the current guide and review a remote installer before execution",
+      "Verify executable availability without configuring plugins or running a model",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-002",
+    "question": "My Python app has pyproject.toml and poetry.lock. Add Relay as a dependency, but do not configure observability.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Preserve Poetry, resolve the current stable Python package and its requirements, and verify it in the project environment.",
+    "expected_behavior": [
+      "Recognize an explicitly requested application dependency",
+      "Inspect authoritative project metadata and resolve any manager conflict",
+      "Use the current package instructions with Poetry rather than introducing another manager",
+      "Verify package availability through the Poetry environment and stop before runtime configuration",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-003",
+    "question": "My Rust service needs the Relay core package. Adaptive tuning might come later.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Use current stable crate metadata and installation guidance to add only the required core dependency.",
+    "expected_behavior": [
+      "Preserve the Cargo workspace and explicit project constraints",
+      "Resolve current toolchain requirements instead of quoting a minimum from the skill",
+      "Do not add adaptive packages solely because they may be useful later",
+      "Verify dependency resolution without implementing a first workflow",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-004",
+    "question": "We use LangChain and Deep Agents. Install the maintained integration dependencies, without wiring callbacks.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Read current integration installation instructions and install only the framework dependencies needed by the project.",
+    "expected_behavior": [
+      "Read the maintained-integrations reference and current target-specific docs",
+      "Preserve the project's authoritative Python manager",
+      "Derive the needed extras and provider dependencies from current sources",
+      "Stop before callbacks, plugin activation, or model calls",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-005",
+    "question": "Relay is already installed. I need plugin configuration for export and adaptive behavior.",
+    "expected_skill": null,
+    "expected_script": null,
+    "ground_truth": "Recognize that installation is complete and route configuration to the appropriate follow-up workflow.",
+    "expected_behavior": [
+      "Do not invoke installation as the primary workflow or repeat package commands",
+      "Distinguish dependency installation from runtime configuration",
+      "Use targeted plugin or instrumentation guidance",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-006",
+    "question": "Can you install NeMo Relay?",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Disambiguate the intended runtime, framework, application binding, or CLI use before choosing packages.",
+    "expected_behavior": [
+      "Ask one concise question about the intended outcome or execution boundary",
+      "Do not default to the CLI or provide an installer before the target is established",
+      "Use existing conversation context to avoid repeating an answered question",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-007",
+    "question": "I am in a Python repository and just want to try Relay. What should I install?",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Treat the manifest as context rather than authorization to select a Python binding or CLI.",
+    "expected_behavior": [
+      "Ask whether Relay is for an agent runtime, framework, direct application integration, or gateway use",
+      "Do not silently choose the CLI because this is a generic trial",
+      "Do not infer a binding solely from the Python manifest",
+      "Install only after establishing the actual target",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-008",
+    "question": "I installed the CLI, but my gateway or config seems broken. Should I reinstall everything?",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Use current documented diagnostics at the failed readiness or configuration boundary without reinstalling unrelated packages.",
+    "expected_behavior": [
+      "Confirm what is installed and which operation failed",
+      "Read current diagnostic guidance for the selected mode",
+      "Distinguish executable readiness from persistent host or gateway configuration",
+      "Do not use CLI diagnostics as proof that an unrelated language package is installed",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-009",
+    "question": "Make Relay persistent in Codex Desktop, where I am having this conversation.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Check current persistent-install guidance and the provider-filtering issue, preview the change, and preserve the recovery-note and confirmation gate.",
+    "expected_behavior": [
+      "Check applicability of the referenced continuity issue rather than asserting the bug is current solely from the skill",
+      "Explain any relevant provider/history risk and temporary alternative",
+      "Obtain explicit confirmation covering the recovery note and global change",
+      "Render and verify the workspace recovery note before the supported installer runs",
+      "Give the recovery-file path before a requested restart and avoid private session storage",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-010",
+    "question": "My conversations disappeared after persistent Relay setup in Codex Desktop. Help undo it.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Check the documented provider-visibility issue and supported recovery path without assuming data deletion or modifying private storage.",
+    "expected_behavior": [
+      "Read current recovery and diagnostic documentation",
+      "Explain hidden-versus-deleted uncertainty using the observed setup",
+      "Use the supported uninstall or continuation route after fully quitting Desktop",
+      "Do not inspect, copy, rewrite, or delete session files or SQLite state",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-011",
+    "question": "Install dependencies for the LangChain NVIDIA quick start in this Poetry project. Do not run the example yet.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Resolve stable package requirements and provider extras from current documentation while preserving Poetry.",
+    "expected_behavior": [
+      "Read the current installation and matching integration guidance",
+      "Derive framework and provider dependencies from the selected sources rather than a stored extras recipe",
+      "Use the latest published stable release unless an explicit project constraint applies",
+      "Do not let an example pin silently override the stable default",
+      "Verify in the Poetry environment without a model call",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-012",
+    "question": "Install the published Switchyard plugin for Relay. I do not want a source build.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Resolve compatible current stable CLI and plugin-bundle releases independently, verify integrity, and stop at availability.",
+    "expected_behavior": [
+      "Read the current bundle and platform documentation",
+      "Do not assume plugin and Relay release numbers match",
+      "Check the selected platform's actual release assets and checksum procedure",
+      "Preserve the manifest/library bundle layout documented for that release",
+      "Do not enable routing, start a gateway, or broaden attestation policy as an installation check",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-013",
+    "question": "A pending quick-start guide pins an unpublished Relay build. I asked for a normal stable install.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Default to the latest published stable release and its actual requirements, explaining why the pending guide does not establish publication or override the requested default.",
+    "expected_behavior": [
+      "Check official release and package metadata for the chosen target",
+      "Do not install a prerelease or source build merely to reproduce a pending guide",
+      "Use documentation compatible with the resolved stable release",
+      "Report a platform or package publication gap rather than claiming success",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-014",
+    "question": "Hermes is already installed. Install Relay for its native quick start.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Read current native-integration requirements, check host readiness, and avoid a duplicate dependency installation.",
+    "expected_behavior": [
+      "Check current Hermes integration guidance and whether the host manages Relay",
+      "Verify native readiness through the documented host checks",
+      "Do not install the former observability plugin or a CLI wrapper as a substitute for native support",
+      "Hand local export and the first run to get-started with the established target",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-install-015",
+    "question": "The prerequisites link is unavailable and the public docs display an older release than the live package registry. Preview the current stable CLI installation.",
+    "expected_skill": "nemo-relay-install",
+    "expected_script": null,
+    "ground_truth": "Resolve the latest published stable release by cross-checking live official release and registry metadata, then obtain compatible installation and platform requirements from release-matched official source rather than an old prerequisite table.",
+    "expected_behavior": [
+      "Do not treat a cached latest-release redirect or default documentation version as authoritative by itself",
+      "Check actual selected-platform release assets and package availability",
+      "Use the matching release tag when rendered documentation is inaccessible or incomplete",
+      "State any still-unverified requirements rather than inventing a minimum version"
+    ]
+  }
+]

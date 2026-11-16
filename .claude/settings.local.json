@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git clone https://github.com/aniketak159-hub/Vaultora---Secure-Digital-Workspace-Vault .)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Git\\\\cmd\\\\git.exe\" --version)",
+      "PowerShell(curl -L -o vaultora_repo.zip \"https://codeload.github.com/aniketak159-hub/Vaultora---Secure-Digital-Workspace-Vault/zip/refs/heads/main\" 2>&1)",
+      "PowerShell(Invoke-WebRequest \"https://codeload.github.com/aniketak159-hub/Vaultora---Secure-Digital-Workspace-Vault/zip/refs/heads/main\" -OutFile \"vaultora_repo.zip\")",
+      "PowerShell(Expand-Archive -Path \"vaultora_repo.zip\" -DestinationPath \"Vaultora-download\")",
+      "PowerShell(Move-Item -Destination . -Force)",
+      "PowerShell(if \\(-not \\(Test-Path .claude\\)\\) { New-Item -ItemType Directory .claude })",
+      "PowerShell(npm install)",
+      "PowerShell(npm install --legacy-peer-deps)",
+      "PowerShell(ls \"C:\\\\Program Files\\\\Git\\\\bin\\\\git.exe\" 2>$null; ls \"C:\\\\Program Files \\(x86\\)\\\\Git\\\\bin\\\\git.exe\" 2>$null; ls \"$env:LOCALAPPDATA\\\\Programs\\\\Git\\\\bin\\\\git.exe\" 2>$null)",
+      "PowerShell(winget install Git.Git)",
+      "PowerShell(Get-Content \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\323a2cc547327b20\\\\7143f737-8fff-4e5c-8e3a-f9da90dca210\\\\tasks\\\\bgg9fgc97.output\" -Wait -Tail 50)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\Git\\\\bin;$env:PATH\"; where git)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\Git\\\\bin;C:\\\\Program Files\\\\Git\\\\cmd;$env:PATH\"; git --version)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\Git\\\\bin;C:\\\\Program Files\\\\Git\\\\cmd;$env:PATH\"; npx skills add NVIDIA/skills --agent claude-code)",
+      "PowerShell(\\(ls \".claude\\\\skills\" -ErrorAction SilentlyContinue\\).Count)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

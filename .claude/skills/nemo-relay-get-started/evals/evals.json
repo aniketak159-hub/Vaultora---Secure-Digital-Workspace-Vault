@@ -1,0 +1,314 @@
+[
+  {
+    "id": "nemo-relay-get-started-001",
+    "question": "I keep hearing about Relay and want to try it. What should I do?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read the current quick-start index and establish the user's execution boundary before selecting a guide.",
+    "expected_behavior": [
+      "Do not automatically choose a CLI demo from a generic request",
+      "Use existing environment and intent, asking one concise question if the boundary remains unclear",
+      "Select one applicable maintained guide and read its current instructions",
+      "Use its documented result and fresh Relay evidence rather than a universal exporter requirement",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-002",
+    "question": "Installation is complete, the CLI works, and I selected Codex. Continue the quick start.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Preserve the target and verified installation, select compatible current Codex guidance, and continue from the appropriate guide step.",
+    "expected_behavior": [
+      "Do not repeat target selection or reinstall verified dependencies",
+      "Read the matching guide and derive current prerequisites and execution steps",
+      "Carry the installed release and environment through the handoff",
+      "Use the guide's actual verification",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-003",
+    "question": "Help me try Relay with Claude Code. Claude is installed, but Relay is missing.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Keep Claude Code selected and hand only missing installation to the install skill, then resume the compatible guide.",
+    "expected_behavior": [
+      "Preserve the named host",
+      "Pass the established target to installation rather than asking it to choose again",
+      "Resolve current stable requirements instead of a skill-maintained pin",
+      "Return to the guide's next appropriate step after install verification",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-004",
+    "question": "Both Codex and Claude are available, and I do not care which one you use.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Use the current index and compatible host guidance to choose one available path under the user's delegated preference.",
+    "expected_behavior": [
+      "Select one applicable guide and explain the choice briefly",
+      "Check its actual host requirements rather than a stored minimum",
+      "Do not configure or launch both agents",
+      "Follow the selected guide's procedure",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-005",
+    "question": "The repository already has .nemo-relay/config.toml and plugins.toml used by another developer. Help me try Relay.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read the current guide's supported configuration selection, preserve existing files, and adapt the trial without assuming legacy files are active or overwriting them.",
+    "expected_behavior": [
+      "Establish the selected guide and actual configuration source",
+      "Derive file selection and working-directory requirements from that guide",
+      "Preserve existing user and project settings and artifacts",
+      "Preview the smallest necessary changes and choose a fresh location where appropriate",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-006",
+    "question": "Relay and Codex are ready. Show the proposed setup and command before any model call.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read the compatible current Codex guide, preview its relevant configuration and command, and honor the explicit stop before a live run.",
+    "expected_behavior": [
+      "Derive configuration fields and schemas from the guide instead of an embedded template",
+      "Check the current provider and permission requirements",
+      "Do not add an output format absent from the selected guide",
+      "Stop before the live model call as requested",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-007",
+    "question": "My Python application uses LangGraph. Give me the appropriate Relay quick start.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Use the maintained LangGraph guide and its current sample, requirements, and success criteria.",
+    "expected_behavior": [
+      "Select the framework path rather than manual binding instrumentation or an unrelated CLI demo",
+      "Read the guide and referenced files from a consistent revision",
+      "Determine whether this guide uses local or live execution",
+      "Require only the credentials and lifecycle evidence requested by that guide",
+      "Preserve the package manager and existing framework boundary",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-008",
+    "question": "I own the Python tool/model call sites. I want Relay in my app, not a coding-agent demo.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Choose the current compatible Python guide and adapt its smallest documented attachment to the application.",
+    "expected_behavior": [
+      "Confirm a maintained framework is not the better existing boundary",
+      "Read the Python guide and its referenced sample rather than generating a recipe from skill memory",
+      "Use install only for missing dependencies",
+      "Follow the guide's activation, event delivery, cleanup, and verification steps",
+      "Explain whether the sample validates local callbacks or live inference",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-009",
+    "question": "Deploy Relay production-wide with export, policy, pricing, and optimization using get-started.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Recognize scope beyond a single first-value guide and route broader work separately.",
+    "expected_behavior": [
+      "Identify production rollout and multiple behaviors as beyond the initial quick start",
+      "Use the current guide for an initial proof when useful",
+      "Offer targeted follow-up workflows rather than implementing an omnibus deployment",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-010",
+    "question": "The agent completed its task, but capture files are empty. Should I reinstall everything?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Use the selected guide's actual configuration and finalization checks to diagnose capture without broad reinstallation.",
+    "expected_behavior": [
+      "Read the guide's expected outputs and artifact paths",
+      "Distinguish a successful application response from Relay evidence",
+      "Check the selected runtime's configuration, capture, output permissions, and finalization as documented",
+      "Do not fail the trial for an exporter that was never required or enabled",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-011",
+    "question": "Hermes is installed. Do I also need Relay or an observability plugin?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read current native Hermes guidance and distinguish dependency readiness, an integration package, and local export configuration.",
+    "expected_behavior": [
+      "Do not install a duplicate Relay runtime when Hermes manages it",
+      "Distinguish the former integration plugin from built-in export configuration",
+      "Answer the installation question without launching an unrequested trial",
+      "Use current documentation for readiness and export requirements",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-012",
+    "question": "How do I configure Prometheus scraping for my GKE cluster?",
+    "expected_skill": null,
+    "expected_script": null,
+    "ground_truth": "Recognize a general infrastructure question outside Relay onboarding.",
+    "expected_behavior": [
+      "Do not invoke or recommend the Relay get-started skill",
+      "Address the infrastructure question without introducing Relay installation or config",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-013",
+    "question": "The first quick start worked. Which Relay plugin should I explore next?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Use the current plugin and integration documentation to suggest one compatible next behavior aligned with the user's goal.",
+    "expected_behavior": [
+      "Infer or ask the next goal before recommending a plugin",
+      "Explain that the proven attachment can support later configuration changes",
+      "Do not repeat export setup already completed by the guide",
+      "Check current integration capabilities instead of relying on a frozen list of plugins",
+      "Suggest one next plugin rather than enabling multiple behaviors",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-014",
+    "question": "I am in Codex Desktop and want a safe temporary Relay trial while keeping access to this conversation.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read current local Codex quick-start and continuity guidance, distinguish the temporary CLI process from Desktop, and avoid unsolicited persistent setup.",
+    "expected_behavior": [
+      "Do not imply the running Desktop app is instrumented by a wrapped CLI trial",
+      "Read current documentation before choosing temporary launch or conversation continuation steps",
+      "Check applicability of the provider-history issue rather than assuming a permanently current bug",
+      "Use supported continuation guidance after fully quitting the same local Desktop conversation",
+      "Do not modify private session storage",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-015",
+    "question": "The temporary trial worked. Make Relay persistent in Codex Desktop.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Route persistent host setup to install and retain applicable continuity safeguards.",
+    "expected_behavior": [
+      "Do not treat a temporary trial as authorization for an unreviewed global change",
+      "Use the install skill's current persistent-setup guidance",
+      "Retain the warning, recovery note, confirmation, and restart handoff requirements",
+      "Avoid private configuration or session-storage workarounds",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-016",
+    "question": "Hermes is authenticated. Walk me through its Relay quick start with local event evidence.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read and follow the current Hermes guide through its observable proof instead of stopping at native availability.",
+    "expected_behavior": [
+      "Preserve Hermes as the execution boundary",
+      "Read the guide's current diagnostics, configuration selection, run instructions, and expected evidence",
+      "Do not install a duplicate runtime or former integration plugin",
+      "Verify fresh capture according to that guide and report what it proves",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-017",
+    "question": "I use pi and want its Relay quick start. Can I use whichever pi is newest with a temporary wrapper?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read current compatibility guidance before choosing the host and integration setup.",
+    "expected_behavior": [
+      "Do not quote a host-version pin from skill memory",
+      "Use current guide and release documentation to establish host compatibility",
+      "Explain any in-process extension or persistent host change the guide requires",
+      "Distinguish temporary gateway execution from persistent extension setup",
+      "Resolve any stable-release compatibility mismatch before proceeding",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-018",
+    "question": "Use the OpenClaw quick start with my NVIDIA model. My normal gateway is shared.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Follow the current OpenClaw guide in an isolated test setup, applying only compatibility notes relevant to the actual environment.",
+    "expected_behavior": [
+      "Do not restart or stop the shared gateway",
+      "Read current provider compatibility notes rather than preserving a copied workaround",
+      "Use the guide's current plugin configuration, capture controls, lifecycle, and verification",
+      "Preserve working provider details and unrelated settings",
+      "Verify the guide's actual evidence and support limits",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-019",
+    "question": "Help me try Switchyard routing inside Relay.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Resolve the current compatible Switchyard guide through plugin documentation or maintained source, then follow its actual installation, configuration, and proof rather than an obsolete quick-start route.",
+    "expected_behavior": [
+      "Discover whether Switchyard is documented as a first-party plugin rather than assuming an old quick-start URL exists",
+      "Derive manager, install scope, configuration discovery, and prerequisites from current matching documentation",
+      "Do not invent manual bundle or project-local manifest steps when the guide uses managed installation",
+      "Distinguish an unmerged source guide from published support and stop at a genuine documentation gap",
+      "Use the guide's actual response and routing checks without imposing an unrelated tool/agent contract",
+      "Preserve unrelated settings and credentials"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-020",
+    "question": "The response looks right and there is a capture file from yesterday. Can we count the quick start as passed?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Require evidence from the current invocation using the selected guide's success checks while preserving prior files.",
+    "expected_behavior": [
+      "Do not treat stale artifacts or a model response as proof of current Relay capture",
+      "Use a fresh output location where needed without deleting existing evidence",
+      "Apply the selected guide's actual artifact and event checks",
+      "Do not manufacture expected agent-produced files to satisfy verification",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-021",
+    "question": "I want the Rust guide, but I do not know whether my toolchain is new enough or whether I need an inference key.",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Read the compatible current Rust guide and derive its toolchain and provider requirements instead of maintaining them in the skill.",
+    "expected_behavior": [
+      "Preserve the Rust target and inspect its environment",
+      "Read current package and guide requirements rather than stating a stored minimum",
+      "Determine from the guide whether callbacks are local or live",
+      "Use its referenced sample, run location, cleanup, and actual proof",
+      "If documentation is unavailable, state the gap instead of inventing requirements",
+      "Preserves unrelated files and settings, respects existing authorization, and does not expose credentials or complete captured payloads"
+    ]
+  },
+  {
+    "id": "nemo-relay-get-started-022",
+    "question": "The release-matched Python guide prints the expected results, then fails: subscribers.flush() cannot block a running asyncio event loop. Does that count as success, or should I reinstall?",
+    "expected_skill": "nemo-relay-get-started",
+    "expected_script": null,
+    "ground_truth": "Retain the failed verbatim result, inspect the installed release's public subscriber API and diagnostic, and verify the smallest supported asynchronous cleanup correction without reinstalling or claiming the original guide passed.",
+    "expected_behavior": [
+      "Do not count expected business results alone as a completed quick start",
+      "Use the release's public API evidence to diagnose cleanup rather than reinstall unrelated packages",
+      "Explain and verify a minimal correction only within the existing trial scope",
+      "Report the original failure separately from a corrected successful run"
+    ]
+  }
+]
